@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI學習心得分享 - 幫助朋友們進入人工智慧領域的學習資源與知識分享">
+    <title>AI學習之旅 - 一起探索人工智慧的奧秘</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 導航列 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">AI學習之旅</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">首頁</a>
+                <a href="#learning-path" class="nav-link">學習路徑</a>
+                <a href="#resources" class="nav-link">學習資源</a>
+                <a href="#files" class="nav-link">學習檔案</a>
+                <button class="nav-share-btn" onclick="copyLink()">分享給朋友</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 首頁英雄區塊 -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <div class="hero-badge">✨ 歡迎來到AI學習世界</div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">一起探索</span><br>
+                    人工智慧的奧秘
+                </h1>
+                <p class="hero-description">
+                    這是我在AI領域的學習心得分享網站，整理了我所有的學習筆記、資源和經驗。
+                    <strong>希望這些內容能幫助你順利進入AI的世界！</strong>
+                </p>
+                <div class="hero-actions">
+                    <a href="#learning-path" class="btn btn-primary">
+                        <span>🚀 開始學習</span>
+                    </a>
+                    <button class="btn btn-secondary" onclick="copyLink()">
+                        <span>📤 分享給朋友</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">學習資源</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">持續</div>
+                        <div class="stat-label">更新中</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">免費</div>
+                        <div class="stat-label">完全開放</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">🧠</div>
+                    <div class="card-text">機器學習</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🔬</div>
+                    <div class="card-text">深度學習</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">💡</div>
+                    <div class="card-text">AI應用</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 快速分享區塊 -->
+        <section class="share-section">
+            <div class="share-card">
+                <div class="share-content">
+                    <h3>📤 分享給朋友，一起學習AI！</h3>
+                    <p>將這個網站分享給對AI感興趣的朋友，讓他們也能開始AI學習之旅</p>
+                    <div class="url-display">
+                        <div class="url-box">
+                            <span id="page-url" class="url-text">載入中...</span>
+                            <button class="copy-url-btn" onclick="copyLink()" title="複製網址">
+                                <span class="copy-icon">📋</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="share-buttons">
+                    <button class="share-btn facebook" onclick="shareToFacebook()">
+                        <span class="share-icon">📘</span>
+                        <span>Facebook</span>
+                    </button>
+                    <button class="share-btn line" onclick="shareToLine()">
+                        <span class="share-icon">💬</span>
+                        <span>LINE</span>
+                    </button>
+                    <button class="share-btn copy" onclick="copyLink()">
+                        <span class="share-icon">🔗</span>
+                        <span>複製連結</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 為什麼要學習AI -->
+        <section class="why-section">
+            <div class="section-header">
+                <h2>🌟 為什麼要學習AI？</h2>
+                <p class="section-subtitle">人工智慧正在改變世界，現在就是最好的學習時機</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🚀</div>
+                    <h3>未來趨勢</h3>
+                    <p>AI是未來最重要的技術之一，掌握AI技能將為你的職業發展帶來巨大優勢</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💼</div>
+                    <h3>職場競爭力</h3>
+                    <p>越來越多企業需要AI人才，學習AI能大幅提升你的就業競爭力</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🎯</div>
+                    <h3>解決問題</h3>
+                    <p>AI能幫助我們解決複雜問題，從自動化到智能決策，應用無所不在</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🌍</div>
+                    <h3>改變世界</h3>
+                    <p>參與AI的發展，你也能成為推動世界進步的一份子</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 學習路徑 -->
+        <section class="learning-path-section" id="learning-path">
+            <div class="section-header">
+                <h2>🗺️ AI學習路徑指引</h2>
+                <p class="section-subtitle">從零開始，一步步帶你進入AI的世界</p>
+            </div>
+            <div class="path-container">
+                <div class="path-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>📚 基礎準備</h3>
+                        <p>學習Python程式語言、數學基礎（線性代數、機率統計）、資料結構與演算法</p>
+                        <div class="step-tags">
+                            <span class="step-tag">Python</span>
+                            <span class="step-tag">數學基礎</span>
+                            <span class="step-tag">資料科學</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>🧠 機器學習入門</h3>
+                        <p>了解監督式學習、非監督式學習、強化學習的基本概念與實作</p>
+                        <div class="step-tags">
+                            <span class="step-tag">監督式學習</span>
+                            <span class="step-tag">非監督式學習</span>
+                            <span class="step-tag">強化學習</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>🔬 深度學習</h3>
+                        <p>深入神經網路、CNN、RNN、Transformer等架構，學習如何建立深度學習模型</p>
+                        <div class="step-tags">
+                            <span class="step-tag">神經網路</span>
+                            <span class="step-tag">CNN</span>
+                            <span class="step-tag">Transformer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>💡 專業應用</h3>
+                        <p>專精於特定領域：自然語言處理、電腦視覺、語音識別等實際應用</p>
+                        <div class="step-tags">
+                            <span class="step-tag">NLP</span>
+                            <span class="step-tag">電腦視覺</span>
+                            <span class="step-tag">實作專案</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心概念 -->
+        <section class="concepts-section">
+            <div class="section-header">
+                <h2>📚 AI核心概念</h2>
+                <p class="section-subtitle">掌握這些核心概念，建立堅實的AI基礎</p>
+            </div>
+            <div class="cards-grid">
+                <div class="concept-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">🧠</div>
+                    <h3>機器學習基礎</h3>
+                    <p>監督式學習、非監督式學習、強化學習的基本原理與應用場景，這是進入AI領域的第一步</p>
+                    <div class="card-tags">
+                        <span class="tag">監督式學習</span>
+                        <span class="tag">非監督式學習</span>
+                        <span class="tag">強化學習</span>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">🔬</div>
+                    <h3>深度學習</h3>
+                    <p>神經網路、CNN、RNN、Transformer等架構的深入理解，現代AI的核心技術</p>
+                    <div class="card-tags">
+                        <span class="tag">CNN</span>
+                        <span class="tag">RNN</span>
+                        <span class="tag">Transformer</span>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">💡</div>
+                    <h3>自然語言處理</h3>
+                    <p>NLP技術、語言模型、文本分析與生成的最新發展，讓機器理解人類語言</p>
+                    <div class="card-tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">語言模型</span>
+                        <span class="tag">文本分析</span>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">👁️</div>
+                    <h3>電腦視覺</h3>
+                    <p>圖像識別、物件檢測、圖像生成等視覺AI技術，讓機器「看見」世界</p>
+                    <div class="card-tags">
+                        <span class="tag">圖像識別</span>
+                        <span class="tag">物件檢測</span>
+                        <span class="tag">圖像生成</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 實用工具 -->
+        <section class="tools-section">
+            <div class="section-header">
+                <h2>🛠️ 必備工具與框架</h2>
+                <p class="section-subtitle">這些工具能讓你的AI學習事半功倍</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🐍</div>
+                    <h3>Python生態系</h3>
+                    <p>NumPy, Pandas, Scikit-learn等資料科學必備工具，AI開發的基礎</p>
+                    <div class="tool-badge">初學者必學</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🔥</div>
+                    <h3>TensorFlow & PyTorch</h3>
+                    <p>兩大深度學習框架的比較與實戰應用，建立AI模型的強大工具</p>
+                    <div class="tool-badge">進階必備</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">⚡</div>
+                    <h3>Hugging Face</h3>
+                    <p>預訓練模型庫與Transformers套件，快速使用最新的AI模型</p>
+                    <div class="tool-badge">推薦使用</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">☁️</div>
+                    <h3>雲端平台</h3>
+                    <p>Google Colab, AWS, Azure等雲端AI服務，免費開始你的AI專案</p>
+                    <div class="tool-badge">免費可用</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 學習資源 -->
+        <section class="resources-section" id="resources">
+            <div class="section-header">
+                <h2>📖 推薦學習資源</h2>
+                <p class="section-subtitle">精選的學習資源，幫助你快速成長</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📺</div>
+                    <div class="resource-content">
+                        <h3>線上課程</h3>
+                        <p>Coursera, edX, Udacity等平台的優質AI課程推薦，從入門到進階都有</p>
+                        <div class="resource-badge">推薦</div>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">📝</div>
+                    <div class="resource-content">
+                        <h3>技術論文</h3>
+                        <p>arXiv上的重要論文與研究趨勢追蹤，了解AI領域的最新發展</p>
+                        <div class="resource-badge">進階</div>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">💻</div>
+                    <div class="resource-content">
+                        <h3>實作專案</h3>
+                        <p>從零開始的AI專案實作經驗與心得，動手做是最好的學習方式</p>
+                        <div class="resource-badge">實戰</div>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">👥</div>
+                    <div class="resource-content">
+                        <h3>社群與論壇</h3>
+                        <p>Reddit, Stack Overflow, GitHub等學習社群，與其他學習者交流</p>
+                        <div class="resource-badge">社群</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 學習心得 -->
+        <section class="insights-section">
+            <div class="section-header">
+                <h2>💭 我的學習心得</h2>
+                <p class="section-subtitle">分享我在AI學習路上的經驗與建議</p>
+            </div>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-icon">🎯</div>
+                    <h3>學習路徑建議</h3>
+                    <p>從基礎數學開始，逐步掌握機器學習原理，再深入深度學習領域。實作與理論並重，持續關注最新研究發展。記住：<strong>循序漸進，不要急於求成</strong>。</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-icon">⚖️</div>
+                    <h3>理論與實務平衡</h3>
+                    <p>理解演算法背後的數學原理很重要，但實際動手實作更能加深理解。建議每學習一個概念就完成一個小專案。<strong>做中學，學中做</strong>是最好的方式。</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-icon">🔄</div>
+                    <h3>持續學習</h3>
+                    <p>AI領域發展快速，需要保持學習的熱忱。關注頂尖會議論文、參與開源專案、與社群交流都是很好的方式。<strong>學習是一輩子的旅程</strong>。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 學習檔案 -->
+        <section class="files-section" id="files">
+            <div class="section-header">
+                <h2>📄 我的學習檔案</h2>
+                <p class="section-subtitle">整理好的學習筆記、簡報和相關文件，歡迎下載參考</p>
+            </div>
+            <div class="files-grid" id="files-container">
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <div class="file-info">
+                        <h3>AI學習週報 I - 2025年11月22日</h3>
+                        <p class="file-type">PDF 文件</p>
+                        <p class="file-description">AI學習第一週重點整理與心得分享</p>
+                    </div>
+                    <div class="file-actions">
+                        <button class="file-btn view-btn" onclick="viewFile('files/AI Learning I -20251122-weekly summary.pdf', 'pdf')">
+                            👁️ 線上查看
+                        </button>
+                        <a href="files/AI Learning I -20251122-weekly summary.pdf" download class="file-btn download-btn">
+                            ⬇️ 下載
+                        </a>
+                    </div>
+                </div>
+                <!-- 你可以繼續添加更多檔案 -->
+            </div>
+        </section>
+
+        <!-- 行動呼籲 -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>準備好開始你的AI學習之旅了嗎？</h2>
+                <p>將這個網站分享給更多朋友，一起探索AI的無限可能</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="copyLink()">
+                        <span>📤 立即分享</span>
+                    </button>
+                    <a href="#learning-path" class="btn btn-outline btn-large">
+                        <span>🚀 開始學習</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🤖 AI學習之旅</h3>
+                <p>分享AI學習知識，幫助更多人進入AI領域</p>
+            </div>
+            <div class="footer-section">
+                <h4>快速連結</h4>
+                <a href="#home">首頁</a>
+                <a href="#learning-path">學習路徑</a>
+                <a href="#resources">學習資源</a>
+                <a href="#files">學習檔案</a>
+            </div>
+            <div class="footer-section">
+                <h4>分享</h4>
+                <button onclick="shareToFacebook()">Facebook</button>
+                <button onclick="shareToLine()">LINE</button>
+                <button onclick="copyLink()">複製連結</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>持續更新中... 歡迎分享給更多朋友！</p>
+            <p class="footer-note">💡 這個網站完全免費開放，希望這些內容能幫助你順利進入AI的世界</p>
+        </div>
+    </footer>
+
+    <!-- Toast 提示 -->
+    <div id="toast" class="toast"></div>
+    
+    <!-- PDF/檔案預覽模態視窗 -->
+    <div id="file-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">檔案預覽</h3>
+                <button class="modal-close" onclick="closeFileModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="file-preview" src="" frameborder="0"></iframe>
+                <div id="ppt-notice" class="ppt-notice" style="display: none;">
+                    <p>📊 PPT 檔案無法直接在瀏覽器預覽</p>
+                    <p>請點擊下載按鈕下載檔案後使用 PowerPoint 開啟</p>
+                    <p>或將 PPT 轉換為 PDF 格式後即可線上查看</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
