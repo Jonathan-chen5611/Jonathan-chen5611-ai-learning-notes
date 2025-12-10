@@ -23,6 +23,19 @@ function toggleMobileMenu() {
     mobileMenuBtn.classList.toggle('active');
 }
 
+// 隱藏所有卡片細節
+function showDetail(type) {
+    document.querySelectorAll('.card-detail').forEach(el => {
+        el.style.display = 'none';
+    });
+
+// 顯示使用者點擊的那一個
+    const target = document.getElementById(type);
+    if (target) {
+        target.style.display = 'block';
+    }
+}
+
 // 點擊導航連結後關閉移動端菜單
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
