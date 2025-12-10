@@ -212,18 +212,41 @@
                 <h2>📚 AI核心概念</h2>
                 <p class="section-subtitle">掌握這些核心概念，建立堅實的AI基礎</p>
             </div>
-            <div class="cards-grid">
-                <div class="concept-card">
-                    <div class="card-glow"></div>
-                    <div class="card-icon">🧠</div>
-                    <h3>機器學習基礎</h3>
-                    <p>監督式學習、非監督式學習、強化學習的基本原理與應用場景，這是進入AI領域的第一步</p>
-                    <div class="card-tags">
-                        <span class="tag">監督式學習</span>
-                        <span class="tag">非監督式學習</span>
-                        <span class="tag">強化學習</span>
-                    </div>
+            <div class="concept-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">🧠</div>
+                <h3>機器學習基礎</h3>
+                <p>監督式學習、非監督式學習、強化學習的基本原理與應用場景，這是進入AI領域的第一步。</p>
+                <div class="card-tags">
+                    <span class="tag" onclick="showDetail('supervised')">監督式學習</span>
+                    <span class="tag" onclick="showDetail('unsupervised')">非監督式學習</span>
+                    <span class="tag" onclick="showDetail('reinforcement')">強化學習</span>
                 </div>
+                <!-- 🔽 詳細內容區塊（預設隱藏） -->
+                <div class="card-detail" id="supervised" style="display:none;">
+                    <h4>📘 監督式學習</h4>
+                    <p>監督式學習（Supervised Learning）利用「已標註資料」訓練模型，讓系統學會從輸入預測輸出。
+                       常見應用包括影像分類、房價預測與情感分析。</p>
+                    <ul>
+                        <li>分類（Classification）：判斷輸入屬於哪一類，例如垃圾郵件辨識。</li>
+                        <li>回歸（Regression）：預測連續數值，例如房價預測。</li>
+                    </ul>
+                </div>
+                <div class="card-detail" id="unsupervised" style="display:none;">
+                    <h4>🌀 非監督式學習</h4>
+                    <p>非監督式學習（Unsupervised Learning）使用未標註資料，讓模型自動發現資料結構與模式。</p>
+                    <ul>
+                        <li>分群（Clustering）：如 K-Means、DBSCAN。</li>
+                        <li>降維（Dimensionality Reduction）：如 PCA、t-SNE。</li>
+                    </ul>
+                </div>
+                <div class="card-detail" id="reinforcement" style="display:none;">
+                    <h4>⚙️ 強化學習</h4>
+                    <p>強化學習（Reinforcement Learning）透過「試錯」與「獎勵回饋」學習最優策略。
+                       常應用於遊戲、機器人控制與自動駕駛。</p>
+                </div>
+            </div>  
+
                 <div class="concept-card">
                     <div class="card-glow"></div>
                     <div class="card-icon">🔬</div>
@@ -512,6 +535,7 @@
 </body>
 
 </html>
+
 
 
 
